@@ -5,7 +5,7 @@
         <p>Your attempt: <%= @attempt %></p>
         <p>The grid: <%= @grid %></p>
         <p><% @x = @start_time %></p>
-        <p><%= ((@end_time - @x) / 60).floor %> minutes, <%= (@end_time - @x).round(1)  %> s</p>
+        <p><%= ((@end_time - @x) / 60).floor %> minutes, <%= (@end_time - @x).round(1)  %> segundos</p>
         <p>Translation: <%= @result[:translation] %></p>
         <p>Score: <%= @result[:score].to_i %></p>
         <p>Result: <%= @result[:message] %></p>

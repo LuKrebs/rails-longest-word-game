@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 text-center">
+        <% @users.each do |user| %>
+          <ul>
+            <li><%= link_to user.name, user_path(user) %> ~> <%= user.points %> points</li>
+              <ul>
+                <li><%= link_to "Delete", user_path(user), method: :delete, data: { confirm: "Are you sure?" } %></li>
+                <li><%= link_to "Edit user", edit_user_path(user) %></li>
+              </ul>
+          </ul>
+        <% end %>
+        <%= link_to " + Click here to start a new game!", game_path %>
+      </div>
+    </div>
+  </div>
+</div>
